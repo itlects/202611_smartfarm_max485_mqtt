@@ -1,0 +1,6 @@
+user farmserver
+topic read smartfarm/v1/+/telemetry
+topic write smartfarm/v1/+/command
+user farmgateway
+topic write smartfarm/v1/+/telemetry
+topic read smartfarm/v1/+/command

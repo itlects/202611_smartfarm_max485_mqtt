@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS smartfarm CHARACTER SET utf8mb4;
+-- Workbench에서 아래 비밀번호를 .env의 DB_PASSWORD와 일치시키세요.
+CREATE USER IF NOT EXISTS 'smartfarm'@'127.0.0.1' IDENTIFIED BY 'change-db-password';
+GRANT SELECT, INSERT ON smartfarm.* TO 'smartfarm'@'127.0.0.1';
+USE smartfarm;
+CREATE TABLE IF NOT EXISTS telemetry (
+ id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+ node_id TINYINT NOT NULL, raw SMALLINT UNSIGNED NOT NULL,
+ pump BOOLEAN NOT NULL, led TINYINT NOT NULL,
+ created_at TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+ INDEX node_time(node_id,created_at)
+);

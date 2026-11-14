@@ -1,0 +1,5 @@
+#define WIFI_SSID "YOUR_WIFI"
+#define WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
+#define MQTT_HOST "192.168.0.10"
+#define MQTT_USER "farmgateway"
+#define MQTT_PASSWORD "change-gateway-mqtt-password"
