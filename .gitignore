@@ -1,0 +1,6 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+broker/passwords
+firmware/esp32_gateway/secrets.h
